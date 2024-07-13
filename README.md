@@ -1,6 +1,12 @@
 # Professional README Generator
 
 # Table of Contents
+ I. User Story <br>
+ II. Acceptance Criteria <br>
+ III. Links to Video Walk-through <br>
+ IV. Image of Working App <br>
+ V. Helpful Resources <br>
+ VI. Source Code Credit <br>
 
 ## User Story:
 > - AS a developer
