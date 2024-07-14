@@ -1,6 +1,5 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const { writeFile } = require('fs').promises;
 const fs = require('fs');
 
 // TODO: Create an array of questions for user input
@@ -31,7 +30,7 @@ const questions = [
         message: 'Enter test instructions',
     },
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Choose a license for your project',
         choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'Mozilla', 'None'],    
@@ -58,7 +57,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => writeFile('README.md', generateMarkdown(answers)))
+    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
  };
