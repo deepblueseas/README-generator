@@ -16,8 +16,36 @@ const questions = [
         message: 'Enter a description for your project',
     },
     {
-
-    }
+        type: 'input',
+        name: 'installation',
+        message: 'Enter usage information ie: how will this app be downloaded & ran',
+    },
+    {
+        type: 'input',
+        name: 'contribution',
+        message: 'Enter contribution guidelines',
+    },
+    {
+        type: 'input',
+        name: 'tests',
+        message: 'Enter test instructions',
+    },
+    {
+        type: 'input',
+        name: 'license',
+        message: 'Choose a license for your project',
+        choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'Mozilla', 'None'],    
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username',
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Enter your email',
+    },
 ];
 
 // TODO: Create a function to write README file
