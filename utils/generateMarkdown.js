@@ -1,16 +1,12 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// Function to return a license badge based on which license is passed in
 function renderLicenseBadge(license) {
   if (!license) {
     return '';
   }
-  //Shield.io generates badges for Github
-  //i looked at the static badge page
-  return `[License](https://img.shields.io/badge/License-${license}-violet)`
+  return `![License](https://img.shields.io/badge/License-${license}-violet)`;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function to return the license link
 function renderLicenseLink(license) {
   if (!license) {
     return '';
@@ -18,18 +14,17 @@ function renderLicenseLink(license) {
   return `[License](#license)`;
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {
+// Function to return the license section of README
+function renderLicenseSection(license, title) {
   if (!license || license === 'None') {
     return '';
   }
   return `## License
-  
-  This project, ${data.title}, is licensed under the ${license} License. See [LICENSE](LICENSE) for more information.`
+
+  This project, ${title}, is licensed under the ${license} License. See [LICENSE](LICENSE) for more information.`;
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
 
@@ -41,7 +36,7 @@ function generateMarkdown(data) {
 
   ## Table of Contents
   I. [Installation](#installation)
-  II. [Contribution Guidlines](#contribution-guidelines)
+  II. [Contribution Guidelines](#contribution-guidelines)
   III. [Test Instructions](#test-instructions)
   IV. ${renderLicenseLink(data.license)}
   V. [Contact Information](#contact-information)
@@ -60,11 +55,11 @@ function generateMarkdown(data) {
 
   ## License
 
-  ${renderLicenseSection(data.license)}
+  ${renderLicenseSection(data.license, data.title)}
 
   ## Contact Information
 
-  >GitHub: ${data.github}(https://github.com/${data.github}
+  >GitHub: [${data.github}](https://github.com/${data.github})
   >Email: ${data.email}
 
 `;
