@@ -3,10 +3,10 @@
 # Table of Contents
  I. [User Story](#user-story) <br>
  II. [Acceptance Criteria](#acceptance-criteria) <br>
- III. Links to Video Walk-through <br>
- IV. Image of Working App <br>
- V. Helpful Resources <br>
- VI. Source Code Credit <br>
+ III. [Links to Video Walk-through](#walk-through-video) <br>
+ IV. [Image of Working App](#example-of-app) <br>
+ V. [Helpful Resources](#helpful-resources) <br>
+ VI. [Source Code Credit](#starter-code-credit-httpsgithubcomcoding-boot-camppotential-enigma) <br>
 
 ## User Story:
 > - AS a developer
@@ -24,6 +24,8 @@
 
 
 ## Walk-Through Video:
+
+## Example of App
 
 
 ### Helpful Resources:
