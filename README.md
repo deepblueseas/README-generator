@@ -1,8 +1,8 @@
 # Professional README Generator
 
 # Table of Contents
- I. User Story <br>
- II. Acceptance Criteria <br>
+ I. [User Story](#user-story) <br>
+ II. [Acceptance Criteria](#acceptance-criteria) <br>
  III. Links to Video Walk-through <br>
  IV. Image of Working App <br>
  V. Helpful Resources <br>
@@ -26,8 +26,9 @@
 ## Walk-Through Video:
 
 
-### Helpful Resource:
-> [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide)
+### Helpful Resources:
+> [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) <br>
+> [Inquirer Docs](https://www.npmjs.com/package/inquirer#installation)
 
 
 

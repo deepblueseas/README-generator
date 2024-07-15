@@ -33,7 +33,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Choose a license for your project',
-        choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'Mozilla', 'None'],    
+        choices: ['MIT', 'GPLv3', 'Apache 2.0', 'BSD 3-Clause', 'Mozilla', 'None'],
     },
     {
         type: 'input',
@@ -55,12 +55,18 @@ function writeToFile(fileName, data) {
 }
 
 // TODO: Create a function to initialize app
+//from the inquirer npm, which is very nice 
 function init() {
     inquirer.prompt(questions)
-    .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
-    .then(() => console.log('Successfully wrote to README.md'))
-    .catch((err) => console.error(err));
- };
+        .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
+        .catch((err) => {
+            if (err.isTtyError) {
+                console.log('Prompt could not be rendered in the current environment')
+            } else {
+                console.log('Something went wrong')
+            }
+        });
+}
 
 // Function call to initialize app
 init();
