@@ -30,7 +30,8 @@
 
 ### Helpful Resources:
 > [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) <br>
-> [Inquirer Docs](https://www.npmjs.com/package/inquirer#installation)
+> [Inquirer Docs](https://www.npmjs.com/package/inquirer#installation)<br>
+> [Shields.io](https://shields.io/)
 
 
 
