@@ -68,7 +68,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 //from the inquirer npm, which is very nice 
 function init() {
+    // .prompt is built into inq so we just have to pass in our questions from above
     inquirer.prompt(questions)
+    // the first thing passed in, 'readme.md' names the file, and the generatemkd function will basically populate the file with the answers the user inputs
         .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
         .catch((err) => {
             // TtyError specifically works in the context of inquirer
