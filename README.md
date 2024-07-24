@@ -27,11 +27,18 @@
 
 ## Example of App
 
+**Command line at work**:
+![Command line at work](README-images/cli.png)
+
+**README.md example created with the app**:
+![README Example](README-images/readmeexample.png)
+
 
 ### Helpful Resources:
-> [How to create a Professional README](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) <br>
-> [Inquirer Docs](https://www.npmjs.com/package/inquirer#installation)<br>
-> [Shields.io](https://shields.io/)
+> [How to create a Professional README- Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide) <br>
+> [Inquirer Docs on npmjs.com](https://www.npmjs.com/package/inquirer#installation)<br>
+> [Shields.io for creating badges](https://shields.io/)<br>
+> [Video Submission Guide- Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 
 
 
