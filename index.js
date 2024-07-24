@@ -4,6 +4,7 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
 
 // TODO: Create an array of questions for user input
+// the way to write these is very clearly written out on the inquirer npmjs and also the mini project for this week
 const questions = [
     {
         type: 'input',
@@ -18,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Enter usage information ie: how will this app be downloaded & ran',
+        message: 'Enter usage information ie: how will this app be downloaded & run',
     },
     {
         type: 'input',
@@ -53,6 +54,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
+// something we learned in class and something I have experienced in testing this out a couple times is that
+// the writeToFile function will write over anything you currently have in that file
+// fs.appendFile would add to the file instead of rewriting it
+// in this instance it makes sense to use fs.writeFile, but there are many times append would be the better choice
+// once its gone its gone! (unless of course, you control z to get your original README back ;) )
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
         err ? console.log(err) : console.log('Successfully created README.md!')
@@ -65,6 +71,8 @@ function init() {
     inquirer.prompt(questions)
         .then((answers) => writeToFile('README.md', generateMarkdown(answers)))
         .catch((err) => {
+            // TtyError specifically works in the context of inquirer
+            // tty = terminal. so if you are trying to run the app without a terminal or if your terminal doesn't support the features of your prompts, then this err will run
             if (err.isTtyError) {
                 console.log('Prompt could not be rendered in the current environment')
             } else {
